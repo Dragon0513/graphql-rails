@@ -10,17 +10,17 @@
 
 Game.destroy_all
 
-game1 = Game.create!( title: 'XCOM: UFO Defense')
-game2 = Game.create!( title: 'XCOM: Terror from the Deep')
-game3 = Game.create!( title: 'XCOM: Apocalypse')
-game4 = Game.create!( title: 'XCOM: Enemy Unknown')
-game5 = Game.create!( title: 'XCOM2')
+game1 = Game.create!(title: 'XCOM: UFO Defense')
+game2 = Game.create!(title: 'XCOM: Terror from the Deep')
+game3 = Game.create!(title: 'XCOM: Apocalypse')
+game4 = Game.create!(title: 'XCOM: Enemy Unknown')
+game5 = Game.create!(title: 'XCOM2')
 
 Platform.destroy_all
-platform1 = Platform.create!( name: 'DOS')
-platform2 = Platform.create!( name: 'Amiga')
-platform3 = Platform.create!( name: 'PS3')
-platform4 = Platform.create!( name: 'Xbox 360')
+platform1 = Platform.create!(name: 'DOS')
+platform2 = Platform.create!(name: 'Amiga')
+platform3 = Platform.create!(name: 'PS3')
+platform4 = Platform.create!(name: 'Xbox 360')
 
 GamePlatform.destroy_all
 GamePlatform.create!([
@@ -29,13 +29,13 @@ GamePlatform.create!([
   { game_id: game2.id, platform_id: platform1.id },
   { game_id: game3.id, platform_id: platform1.id },
   { game_id: game4.id, platform_id: platform3.id },
-  { game_id: game5.id, platform_id: platform4.id },
+  { game_id: game5.id, platform_id: platform4.id }
 ])
 
 Author.destroy_all
-author1 = Author.create!( name: 'GameSpot')
-author2 = Author.create!( name: 'PC Gamer')
-author3 = Author.create!( name: 'Game Spy')
+author1 = Author.create!(name: 'GameSpot')
+author2 = Author.create!(name: 'PC Gamer')
+author3 = Author.create!(name: 'Game Spy')
 
 Review.destroy_all
 Review.create!([
