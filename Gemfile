@@ -31,6 +31,8 @@ gem "bootsnap", require: false
 
 gem "graphql"
 
+gem "sprockets-rails"
+
 group :development do
   gem "graphiql-rails"
 end
