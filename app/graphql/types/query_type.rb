@@ -21,11 +21,46 @@ module Types
     # Add root-level fields here.
     # They will be entry points for queries on your schema.
 
-    # TODO: remove me
-    field :test_field, String, null: false,
-      description: "An example field added by the generator"
-    def test_field
-      "Hello World!"
+    field :games, [Types::GameType], null: false
+
+    def games
+      Game.all
+    end
+
+    field :game, Types::GameType, null: false do
+      argument :id, ID, required: true
+    end
+
+    def game(id:)
+      Game.find(id)
+    end
+
+    field :reviews, [Types::ReviewType], null: false
+
+    def reviews
+      Review.all
+    end
+
+    field :review, Types::ReviewType, null: false do
+      argument :id, ID, required: true
+    end
+
+    def review(id:)
+      Review.find(id)
+    end
+
+    field :platforms, [Types::PlatformType], null: false
+
+    def platforms
+      Platform.all
+    end
+
+    field :platform, Types::PlatformType, null: false do
+      argument :id, ID, required: true
+    end
+
+    def platform(id:)
+      Platform.find(id)
     end
   end
 end

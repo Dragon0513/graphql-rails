@@ -29,10 +29,16 @@ gem "bootsnap", require: false
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin Ajax possible
 # gem "rack-cors"
 
-gem "graphql"
+gem "graphql", "~>2.4.8"
+
+gem "sprockets-rails", "~>3.5.2"
 
 group :development do
-  gem "graphiql-rails"
+  gem "graphiql-rails", "~>1.10.1"
+end
+
+group :test do
+  gem "rspec-rails", "~>7.1.0"
 end
 
 group :development, :test do
@@ -44,4 +50,8 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  gem "factory_bot_rails", "~>6.4.4"
+
+  gem "faker", "~>3.5.1"
 end
