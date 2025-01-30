@@ -56,3 +56,34 @@ Variables
   "id": 1
 }
 ```
+
+### Testing Mutations
+#### To create a  game
+
+Operation
+```graphql
+mutation CreateGame($attributes: GameInput!) {
+  createGame(input: {
+    attributes: $attributes
+  })
+  {
+    game {
+      id,
+      title,
+      platformNames
+    }
+    errors
+  }
+}
+```
+
+Variables
+```json
+{
+  "attributes": {
+    "title": "XCOM3",
+    "description": "Lorem ipsum",
+    "platformIds": [1, 2]
+  }
+}
+```
