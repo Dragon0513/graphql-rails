@@ -87,3 +87,25 @@ Variables
   }
 }
 ```
+
+#### To delete a game
+```graphql
+mutation DeleteGame($id: ID!){
+  deleteGame(
+    input: { id: $id }
+  )
+  {
+    game {
+	    title
+    }
+    errors
+  }
+}
+```
+
+variables
+```json
+{
+  "id": 6
+}
+```
