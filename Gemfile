@@ -34,7 +34,7 @@ gem "graphql", "~>2.4.8"
 gem "sprockets-rails", "~>3.5.2"
 
 group :development do
-  gem "graphiql-rails", "~>1.10.1"
+  gem "graphiql-rails", "~>1.10.4"
 end
 
 group :test do
